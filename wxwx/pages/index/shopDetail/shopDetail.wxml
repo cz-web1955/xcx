@@ -1,0 +1,132 @@
+<!--pages/index/shopDetail/shopDetail.wxml-->
+<import src="../../../js/wxParse.wxml"/>
+<swiper  style="height:321px" indicator-dots='true' indicator-color='#999999' indicator-active-color='#333333' circular='true' interval='3000' autoplay='true'>
+  <block wx:for="{{bannerList}}" wx:key='index'>
+    <swiper-item >
+      <image src="{{item}}" style="width:100%;height:321px" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="shop_detail">
+<block wx:for="{{detailList}}" wx:key="index">
+  <!-- 价格展示 -->
+  <view class="title_price">
+    <view class="every">
+      <text>￥</text>
+      <text>{{item.integral}}</text>
+      <!-- <text></text> -->
+      <text>+</text> 
+      <text class="nsb iconfont iconyuanbao"></text>
+      <text>{{item.price}}</text>
+      
+      <text>{{item.yprice}}</text>
+    </view>
+    <view class="atten">{{item.hits}}人已关注</view>
+  </view>
+
+  <!-- 商品内容 -->
+  <view class="shop_inner">
+    <view class="tit">{{item.title}}</view>
+    <view class="refund">
+      <view>极速退款 · 72小时内发货</view>
+      <view>运费 ￥{{item.fee_start_1}}</view>
+    </view>
+  </view>
+
+  <!-- 店铺 -->
+  <view class="shop_store">
+    <view class="photo"><image mode="scaleToFill" src="../../../images/hsy.jpg"/></view>
+    <view class="inner">
+      <view>{{item.company}}</view>
+      <view>{{item.business}}</view>
+    </view>
+  </view>
+
+  <!-- 商品详情图片展示 -->
+  <view class="shop_pho">
+    <view>商品详情</view>
+    <view><template is="wxParse" data="{{wxParseData:article.nodes}}"/></view>
+  </view>
+
+  <!-- 兑换说明 -->
+  <view class="shop_txt">
+    <view class="title">兑换说明</view>
+    <view>1、除商品本身不能正常兑换外，商品一经兑换，一律不退还猿宝币，请用户兑换前仔细参照使用规则、使用说明、有效期等重要信息</view>
+    <view>2、对于每位用户限兑一次的商品，若发现多个用户账号使用相同手机号或收货地址兑换同一商品，则自动取消订单，被扣除的猿宝币不退还</view>
+    <view>3、通过非法途径获得鲸鱼币后进行的正常兑换行为，或不按商品使用规则进行兑换，商家有权不提供服务</view>
+    <view>4、凡以不正当手段（包括但不限于作弊、扰乱系统、实施网络攻击等）进行兑换，平台有权终止该次兑换</view>
+  </view>
+
+  <!-- 看了又看 -->
+  <view class="shop_look">
+    <view class="title">—— 看了又看 ——</view>
+
+    <view class="inner">
+      <block wx:for="{{lookList}}" wx:key="index" >
+        <view class="every">
+        <view   bindtap="goDetail" data-id="{{item.itemid}}">
+          <image mode="scaleToFill" src="{{item.thumb}}" />
+          <view class="text">
+            <view>{{item.title}}</view>
+            <view>￥{{item.integral}} + <text class="nsb iconfont iconyuanbao"></text>{{item.price}}</view>
+          </view>
+        </view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+  </block>
+</view>
+
+<!-- 下方点击操作 -->
+  <view class="shop_end">
+    <view class="every ona" bindtap="goIndex">
+      <icon class="ser iconfont iconhome-fill"></icon>
+      <view class="txt">首页</view>
+    </view>
+    <view bindtap="goServer" class="every">
+      <icon class="ser iconfont iconservice"></icon>
+      <view class="txt">客服</view>
+      <!-- <contact-button tnt-inst-id="KLb_gKT0" scene="SCE00207272" alipay-card-no="{{userid}}"/> -->
+    </view>
+    <view class="submit">
+      <button bindtap="goAuth" wx:if="{{username==''}}">加入收藏</button>
+      <button bindtap="goAuth" wx:if="{{username==''}}">立即兑换</button>
+      <view bindtap="shows" wx:if="{{username}}">加入收藏</view>
+      <view bindtap="toNowbuy" wx:if="{{username}}">立即兑换</view>
+    </view> 
+  </view>
+
+<!-- 遮罩层 -->
+<view wx:if='{{viewShow==false}}' class="show">
+<block wx:for="{{detailList}}" wx:key="index">
+
+  <view class="shopDetail_select">
+    <view class="price">
+      <view class="photos"><image mode="scaleToFill" src="{{item.thumb}}"/></view>
+      <view class="money">
+        <view>￥{{item.integral}} + <text class="nsb iconfont iconyuanbao"></text> {{item.price}}</view>
+        <view>请选择：规格</view>
+      </view>
+    </view>
+    <!-- <view class="taba" onTap="close">×</view> -->
+    <view class="taba iconfont iconclose" bindtap="close"></view>
+    <view class="speci">规格</view>
+      <view class="every" wx:if="{{specOne}}">
+        <block wx:for='{{specOne}}' wx:key='index'>
+          <view class="{{s1==item?'act':''}}" bindtap='s1' data-index='{{item}}'>{{item}}</view>
+        </block>
+      </view>
+
+      <view class="every" wx:if="{{specTwo}}">
+        <block wx:for='{{specTwo}}' wx:key='index'>
+          <view class="{{s2==item?'act':''}}" bindtap='s2' data-index='{{item}}'>{{item}}</view>
+        </block>
+      </view>
+
+      <view wx:if="{{specTwo==''&&specOne==''}}">暂无可选规格</view>
+  </view>
+  </block>
+</view>

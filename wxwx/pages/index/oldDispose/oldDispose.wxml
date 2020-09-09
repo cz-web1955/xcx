@@ -1,0 +1,42 @@
+<!--pages/index/oldDispose/oldDispose.wxml-->
+<view class="old_back">
+  <image mode="scaleToFill" src="../../../images/old_back1.jpg" class="header"/>
+  <view class="inn">
+    <view class="inner">
+      <view class="aa">
+        <view class="txt">
+          <view class="mad">
+            <view>●</view>
+            <view>环保再生</view>
+          </view>
+          <view class="inas">将可用于再生的棉毛、涤纶类等旧衣物通过物理或者化学方法加工成农业保温材料、建筑和工业隔音材料、填充材料等。</view>
+        </view>
+        <image mode="scaleToFill" src="../../../images/old_back3.png"/>
+      </view>
+      <view class="bb">
+        <image mode="scaleToFill" src="../../../images/old_back4.png"/>
+        <view class="txt">
+          <view class="mad">
+            <view>●</view>
+            <view>旧衣出口</view>
+          </view>
+          <view class="inas">将较新、质量较好的夏装经过清洗、消毒，交给相关的外贸公司出口到非洲、东南亚等-些贫困国家。所得收益用于快递物流及项目运营的支出。</view>
+        </view>
+      </view>
+      <view class="cc">
+        <view class="txt">
+          <view class="mad">
+            <view>●</view>
+            <view>公益捐赠</view>
+          </view>
+          <view class="inas">将质量较好较新的衣服，一般为小孩冬装交给公益团体或者基金会进行清洗、消毒后捐赠到有需要三的贫困山区或者公益组织及个人。</view>
+        </view>
+        <image mode="scaleToFill" src="../../../images/old_back5.png"/>
+      </view>
+    </view>
+  </view>
+  <view class="goSub" bindtap="goResever">
+    <image mode="scaleToFill" src="../../../images/old_back6.png"/></view>
+  <!-- <button class="goSub" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if="{{username==''}}">
+    <image mode="scaleToFill" src="../../../images/old_back6.png"/></button> -->
+</view>

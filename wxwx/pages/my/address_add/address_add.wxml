@@ -1,0 +1,45 @@
+<!--pages/my/address_add/address_add.wxml-->
+<view class="address_add">
+  <view class="inner">
+    <view class="every">
+      <view class="nas iconfont iconaccount"></view>
+      <input placeholder="请输入姓名" name='username' bindinput="name" value="{{name}}"/>
+    </view>
+    <view class="every">
+      <view class="nas iconfont iconshouji"></view>
+      <input placeholder="请输入手机号码" type="numberpad" name='phone' bindinput="phones" value="{{phone}}"/>
+    </view>
+    <view class="every">
+      <view class="nas iconfont iconlbsfill"></view>
+        <view class='input' bindtap="opendz">
+          <input onfocus="this.blur()" disabled="{{true}}" class='ship_citychoose' value="{{province}} - {{city}} - {{county}}"></input>
+        </view>
+      <!-- 选择地区 disabled -->
+      <view class="address-picker" wx:if="{{visible}}" wx:key='index'>
+        <view class="picker-box">
+          <view class="btn-box">
+            <text class="cancel-btn" bindtap="cancel">取消</text>
+            <text class="confirm-btn" bindtap="confirm">确定</text>
+          </view>
+          <picker-view  style="height:300px" value="{{value}}" mode="region" bindchange="bindChange">
+            <picker-view-column>
+              <view style="text-align:center" wx:for="{{provinces}}" wx:key='index'>{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+              <view style="text-align:center" wx:for="{{citys}}" wx:key='index'>{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+              <view style="text-align:center" wx:for="{{countys}}" wx:key='index'>{{item}}</view>
+            </picker-view-column>
+          </picker-view>
+        </view>
+      </view>
+
+    </view>
+    <view class="every nex">
+      <view class="nas iconfont icondingwei2"></view>
+      <input class="input22" placeholder="请填写详细的街道、小区、门牌号" type="text" bindinput="addres" value="{{adres}}"/>
+    </view>
+  </view>
+  <view class="add" bindtap="addSubmit">确认添加</view>
+</view>

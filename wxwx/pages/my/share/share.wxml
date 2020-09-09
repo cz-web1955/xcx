@@ -1,0 +1,5 @@
+<!--pages/my/share/share.wxml-->
+<view class="share">
+  <image class="share_img" mode="scaleToFill" src="../../../images/share.png"/>
+  <button open-type="share">点击邀请好友</button>
+</view>

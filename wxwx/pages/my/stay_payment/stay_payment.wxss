@@ -1,0 +1,183 @@
+/* pages/my/stay_payment/stay_payment.wxss */
+/* 导航栏选择 */
+.staymonney_header{
+  width: 750rpx;
+  height: 86rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+.staymonney .staymonney_header view{
+  /* width: 200rpx; */
+  text-align: center;
+  line-height: 86rpx;
+}
+.staymonney .staymonney_header .active {
+  position: relative;
+} 
+.staymonney .staymonney_header .active::after{
+  content: '';
+  width: 100%;
+  height: 4rpx;
+  background: #31C0A8;
+  display: inline-block;
+  position: absolute;
+  bottom: 17rpx;
+  left: 0;
+}
+/* 订单内容 */
+.staymonney_inner{
+  width: 710rpx;
+  height: auto;
+  background: #ffffff;
+  margin: 15rpx auto;
+  border-radius: 15rpx;
+}
+.staymonney_inner .shoping_title{
+  width: 710rpx;
+  height: 66rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0rpx 14rpx
+}
+.staymonney_inner .shoping_title .metit{
+  color: rgba(49, 192, 168, 1);
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+}
+.staymonney_inner .shoping_title .messge{
+  display: flex;
+  align-items: center;
+}
+.staymonney_inner .shoping_title .messge .sps{
+  color: #31C0A8;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.staymonney_inner .shoping_title .messge .ssadd{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  margin: 0 10rpx
+}
+.staymonney_inner .shoping_title .messge image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.staymonney_inner .shoping_title .messge .rig{
+  width: 20rpx;
+  height: 20rpx;
+}
+
+
+.staymonney_inner .shoping_inner{
+  width: 710rpx;
+  height: 180rpx;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 16rpx 14rpx
+}
+.staymonney_inner .shoping_inner .fhoto{
+  width: 150rpx;
+  height: 150rpx;
+  /* background: red; */
+}
+.staymonney_inner .shoping_inner .fhoto image{
+  width: 150rpx;
+  height: 150rpx
+}
+.staymonney_inner .shoping_inner .name{
+  width: 390rpx
+}
+.staymonney_inner .shoping_inner .name .name_y{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+.shoping_inner .name view{
+  color: rgba(164, 164, 164, 1);
+  font-size: 24rpx;
+  line-height: 38rpx;
+}
+ .shoping_inner .price view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+}
+.staymonney_inner .shoping_inner .price .price_y{
+  color: rgba(164, 164, 164, 1);
+  text-align: right;
+  line-height: 50rpx;
+}
+
+.srs{
+  position: fixed;
+  left: 50%;
+  top: 200rpx;
+  transform: translateX(-50%)
+}
+.srs image{
+  width: 150rpx;
+  height: 187rpx;
+  /* position: absolute;
+  left: 50%; */
+  /* top:100rpx; */
+  /* transform: translateX(-50%) */
+  margin-left: 80rpx;
+}
+.srs view{
+  line-height: 80rpx;
+}
+.srs view text{
+  color: #31C0A8;
+}
+
+.staymonney_inner .shoping_price{
+  width: 710rpx;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 18rpx
+}
+.staymonney_inner .shoping_price .qian{
+color: rgba(16, 16, 16, 1);
+font-size: 26rpx;
+font-family: PingFangSC-regular;
+}
+.staymonney_inner .shoping_price .nsb{
+  color: #FEAD29;
+  margin: 0 4rpx
+}
+.shoping_price view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  text-align: right;
+  font-family: PingFangSC-regular;
+  line-height: 60rpx;
+}
+
+
+.staymonney_inner .shoping_select{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 18rpx;
+  padding-bottom: 20rpx;
+}
+.staymonney_inner .shoping_select view{
+  width: 200rpx;
+  height: 52rpx;
+  border-radius: 30rpx;
+  border: 1px solid #31C0A8 ;
+  line-height: 52rpx;
+  text-align: center;
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}

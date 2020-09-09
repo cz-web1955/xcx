@@ -1,0 +1,84 @@
+/* pages/my/message/message.wxss */
+.titi{
+  position: fixed;
+  top: 100rpx;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.titi text{
+  margin-top: 100rpx;
+}
+
+.message{
+  width: 750rpx;
+  height: auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+.message .every{
+  width: 750rpx;
+  height: 145rpx;
+  border-bottom: 1px solid #E8E8E8;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 22rpx;
+}
+.message .every .photo{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin-right:22rpx;
+  background: #31c0a8;
+}
+.message .every .photo .nsb{
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 100rpx;
+  margin-left: 18rpx;
+}
+
+.message .every .inform{
+  width: 444rpx;
+}
+.message .inform view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.message .every .inform .mess{
+  color: rgba(164, 164, 164, 1);
+  font-size: 26rpx;
+}
+
+.message .every .time{
+  /* margin-left: 30rpx; */
+  width: 200rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.message .time view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: center;
+  line-height: 50rpx;
+}
+.message .every .time .num{
+  width: 35rpx;
+  height: 35rpx;
+  box-sizing: border-box;
+  padding: 4rpx;
+  background: red;
+  border-radius: 50%;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 28rpx;
+}

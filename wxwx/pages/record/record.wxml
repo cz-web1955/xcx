@@ -1,0 +1,177 @@
+<!--pages/record/record.wxml-->
+<view class="record">
+  <view class="record_header">
+    <view class="{{nums=='1'? 'active' : ''}}" id="1" bindtap="select">等待完成</view>
+    <view class="{{nums=='2'? 'active' : ''}}" id="2" bindtap="select">已经完成</view>
+    <view class="{{nums=='3'? 'active' : ''}}" id="3" bindtap="select">全部记录</view>
+  </view>
+
+  <view >
+    <view  wx:if="{{awaitList.length&&nums=='1'}}"  class="inner">
+      <block wx:for="{{awaitList}}" wx:key='index'>
+      <view  class="record_detail">
+        <view class="time">{{item.created}}</view>
+        <view class="mess">
+          <view class="mess_titletwo">
+            <view>
+              <text class="mess_txt">订单详情</text>
+            </view>
+            <view>
+              <image mode="scaleToFill" src="/images/yidelete.png"/>
+              <text class="mess_txt" wx:if="{{item.status=='0'}}">预约成功</text>
+              <text class="mess_txt" wx:if="{{item.status=='101'}}">已受理</text>
+              <text class="mess_txt" wx:if="{{item.status=='102'}}">接货中</text>
+              <text class="mess_txt" wx:if="{{item.status=='103'}}">运输中</text>
+            </view>
+          </view>
+          <view class="mess_inner">
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的姓名：</view><text>{{item.truename}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的电话：</view><text>{{item.mobile}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的地址：</view><text>{{item.province}}{{item.city}}{{item.district}}{{item.address}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">预计重量：</view><text>{{item.weight}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">上门时间：</view><text>{{item.exdate}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">快递单号：</view><text>{{item.way_bill_code==null?'暂无':item.way_bill_code}}</text>
+            </view>
+            <view class="every">
+              <view class="tit">温馨提示：</view><text wx:if="{{item.status=='0'||item.status=='101'||item.status=='102'||item.status=='103'}}">{{pendingtip}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+
+    <view wx:if="{{awaitList.length<=0&&nums=='1'}}" class="nothing">
+      <image mode="scaleToFill" src="/images/records.png"/>
+      <view>暂无记录</view>
+      去<text class="sub" bindtap="goYyorder">预约看看</text>~
+    </view>
+
+  </view>
+
+  <!-- 已经完成 -->
+  <view>
+    <view wx:if="{{winList.length&&nums=='2'}}" class="inner">
+      <block wx:for="{{winList}}" wx:key='index'>
+      <view class="record_detail">
+        <view class="time">{{item.created}}</view>
+        <view class="mess">
+          <view class="mess_titletwo">
+            <view>
+              <text class="mess_txt">订单详情</text>
+            </view>
+            <view>
+              <image mode="scaleToFill" src="/images/yidelete.png"/>
+              <text class="mess_txt">已签收</text>
+            </view>
+          </view>
+          <view class="mess_inner">
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的姓名：</view><text>{{item.truename}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的电话：</view><text>{{item.mobile}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的地址：</view><text>{{item.province}}{{item.city}}{{item.district}}{{item.address}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">预计重量：</view><text>{{item.weight}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">上门时间：</view><text>{{item.exdate}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">快递单号：</view><text>{{item.way_bill_code==null?'暂无':item.way_bill_code}}</text>
+            </view>
+            <view class="every">
+              <view class="tit">温馨提示：</view><text>{{finishtip}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+
+    <view wx:if="{{winList.length<=0&&nums=='2'}}" class="nothing">
+      <image mode="scaleToFill" src="/images/records.png"/>
+      <view>暂无记录</view>
+      去<text class="sub" bindtap="goYyorder">预约看看</text>~
+    </view>
+
+   </view>
+
+  <!-- 全部记录 -->
+  <view>
+    <view wx:if="{{allList.length&&nums=='3'}}" class="inner">
+      <block wx:for="{{allList}}" wx:key='index'>
+      <view class="record_detail">
+        <view class="time">{{item.created}}</view>
+        <view class="mess">
+          <view class="mess_titletwo">
+            <view>
+              <text class="mess_txt">订单详情</text>
+            </view>
+            <view>
+              <image mode="scaleToFill" src="/images/yidelete.png"/>
+              <text class="mess_txt" wx:if="{{item.status=='0'}}">预约成功</text>
+              <text class="mess_txt" wx:if="{{item.status=='101'}}">已受理</text>
+              <text class="mess_txt" wx:if="{{item.status=='102'}}">接货中</text>
+              <text class="mess_txt" wx:if="{{item.status=='103'}}">运输中</text>
+              <text class="mess_txt" wx:if="{{item.status=='104'}}">已签收</text>
+              <text class="mess_txt" wx:if="{{item.status=='110'}}">已取消</text>
+              <text class="mess_txt" wx:if="{{item.status=='200'}}">已删除</text>
+            </view>
+          </view>
+          <view class="mess_inner">
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的姓名：</view><text>{{item.truename}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的电话：</view><text>{{item.mobile}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">您的地址：</view><text>{{item.province}}{{item.city}}{{item.district}}{{item.address}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">预计重量：</view><text>{{item.weight}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">上门时间：</view><text>{{item.exdate}}</text>
+            </view>
+            <view class="every">
+              <view class="{{item.status=='0'?'every_txttwo':'every_txt'}}">快递单号：</view><text>{{item.way_bill_code==null?'暂无':item.way_bill_code}}</text>
+            </view>
+            <view class="every">
+              <view class="tit">温馨提示：</view><text wx:if="{{item.status=='104'||item.status=='110'||item.status=='200'}}">{{finishtip}}</text><text wx:if="{{item.status=='0'||item.status=='101'||item.status=='102'||item.status=='103'}}">{{pendingtip}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+
+    <view wx:if="{{allList.length<=0&&nums=='3'}}" class="nothing">
+      <image mode="scaleToFill" src="/images/records.png"/>
+      <view>暂无记录</view>
+      去<text class="sub" bindtap="goYyorder">预约看看</text>~
+    </view>
+
+  </view>
+</view>
+
+  <view bindtap="goServer"  class="record_service" wx:if="{{userid}}" >
+  <view class="sesr iconfont iconservice"></view>
+  <!-- <contact-button  wx:if="{{userid}}"/> -->
+</view>

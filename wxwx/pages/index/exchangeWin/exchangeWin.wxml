@@ -1,0 +1,25 @@
+<!--pages/index/exchangeWin/exchangeWin.wxml-->
+<view class="exWin">
+  <image class="header" mode="scaleToFill" src="../../../images/succeed_four.png"/>
+
+  <view class="inner">
+    <view class="every" wx:for="{{scList}}" wx:key='index'>
+      <image mode="scaleToFill" src="{{item.thumb}}" bindtap="goDetails" data-id="{{item.itemid}}"/>
+      <text class="title">{{item.title}}</text>
+      <view class="txt">
+        <text class="asdd">￥{{item.integral}} +</text>
+        <text class="nsb iconfont iconyuanbao"></text><text class="nsb">{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+
+  <swiper style="height:120px;" indicator-dots='true' indicator-color='#999999' indicator-active-color='#333333' circular='true' interval='3000' autoplay='true' class="exshops">
+    <block wx:for="{{shoList}}" wx:key='index'>
+      <swiper-item >
+        <image style="width:100%;height:120px;margin:0rpx auto;border-radius: 10px;" mode="scaleToFill" data-url="{{item.url}}" src="{{item.image_src}}" bindtap="{{item.introduce}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="exWin_down" bindtap="showShop">关闭</view>

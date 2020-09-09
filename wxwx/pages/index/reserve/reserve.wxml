@@ -1,0 +1,112 @@
+<!--pages/index/reserve/reserve.wxml-->
+<!-- <view a:if="{{username}}"> -->
+  
+<swiper style="height:120px;" class="inners_swiper" indicator-dots='true' indicator-color='#999999' indicator-active-color='#333333' circular='true' interval='3000' autoplay='true'>
+  <block wx:for="{{shopList}}" wx:key='index'>
+    <swiper-item >
+      <image mode="scaleToFill"  style="width:100%;height:120px;margin-bottom:15rpx;border-radius: 10px;" data-url="{{item.url}}" src="{{item.image_src}}" bindtap="{{item.introduce}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view class="reserve">
+<!-- 回收类别 -->
+  <view class="reserve_kind">
+    <view class="title">
+      <view><icon class="lei iconfont iconintegral"></icon></view>
+      <text class="saf">回收类别</text>
+    </view>
+
+    <view class="select">
+      <block wx:for="{{select}}" wx:key="index">
+        <view class="every">
+          <image mode="scaleToFill" src="{{item.url}}"/>
+          <view>{{item.text}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 重量估计 -->
+  <view class="reserve_weight">
+    <view class="title">
+      <view class="photo">
+        <icon class="zhong iconfont iconchengzhong-copy"></icon>
+        <text>重量估计</text>
+      </view>
+      <view class="tit">预估重量仅供参考，以实际重量为准</view>
+    </view>
+    <view class="inner">
+      <block wx:for="{{weight}}" wx:key="index">
+        <view bindtap="weights" data-id='{{item.id}}' data-inner='{{item.text}}' class="{{sink==item.id?'shows':''}}">{{item.text}}</view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 地址信息 -->
+  <view class="reserve_address"> 
+    <view class="title">
+      <view class="photo">
+        <view><icon class="xinx iconfont iconeditor"></icon></view>
+        <text>地址信息</text>
+      </view>
+      <view class="tit" bindtap="ktlist">
+        <view><image mode="scaleToFill" src="../../../images/reserve_five.png"/></view>
+        <text>上门范围</text>
+      </view>
+    </view>
+    <view class="add_mess" bindtap="goAddres" wx:if="{{username}}">
+      <view wx:if="{{sele}}" >
+        <view class="name">
+          <text>{{addreName}}</text><text>{{addrePhone}}</text>  
+        </view>
+        <view class="title">{{addrePro}}{{addreCity}}{{addreCoun}}{{addreAd}}</view>
+      </view>
+      <view wx:else class="select">请选择或新建上门地址</view>
+      <!-- <icon class="rights iconfont iconarrow-right"></icon> -->
+      <image src="../../../images/right.png"></image>
+    </view>
+    <view class="add_mess" wx:else>
+      <button hover-class="btn-hover" type="primary" bindtap="goAuth">您还没有登录哦，点我去登录</button>
+    </view>
+  </view>
+
+  <!-- 上门时间 -->
+  <view class="reserve_time">
+    <view class="title">
+      <view><icon class="tis iconfont iconhistory"></icon></view>
+      <text>上门时间</text>
+    </view>
+    <view class="inner">
+      <view class="time">
+        <picker mode="date" value="{{date}}" start="{{f_start}}" end="{{f_end}}" bindchange="bindDateChange">
+          <view class="picker"><text wx:if="{{uptime==false}}">请选择上门时间</text>{{uptime}}</view>
+        </picker>
+      </view>
+      <view class="remake">
+        <view>备注</view>
+        <view class="remake_tie">
+          <input placeholder="当前无备注" type="text" bindinput="remarks" value="{{remark}}"/>
+          <!-- <view class="rights iconfont"></view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 勾选协议 -->
+  <view class="reserve_check">
+    <view class="checked" bindtap="tabs"><image mode="scaleToFill" src="{{photosw?'../../../images/yes.png':''}}"/></view>
+    <view>同意 《<text bindtap="goxieyi">回收猿用户回收协议</text>》</view>
+  </view>
+  
+</view>
+
+<!-- 提交 -->
+ <!-- <form onSubmit="formSubmit" onReset="formReset" report-submit='true'> -->
+  <cover-view class="reserve_sumbit">
+    <button bindtap="subs">
+    提交收回订单
+    </button>
+  </cover-view>
+<!-- </form> -->

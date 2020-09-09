@@ -1,0 +1,38 @@
+/* pages/my/yb_detail/yb_detail.wxss */
+.yb_detail{
+  width: 750rpx;
+  height: auto;
+}
+.yb_detail .every{
+  width: 750rpx;
+  height: 114rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+}
+.yb_detail .every image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 22rpx;
+}
+.yb_detail .every .every_title{
+  display: flex;
+  align-items: center;
+}
+.yb_detail .every .every_title view{
+  color: rgba(16, 16, 16, 1);
+}
+
+.yb_detail .every view{
+font-size: 28rpx;
+font-family: PingFangSC-regular;
+}
+.yb_detail .every .txtsb{
+  color: red
+}
+.yb_detail .every .txtsa{
+  color: green
+}

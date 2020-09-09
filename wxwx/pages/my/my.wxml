@@ -1,0 +1,90 @@
+<!--pages/my/my.wxml-->
+<view class="bod">
+
+	<!-- 头部 -->
+	<view class="my_header">
+		<image mode="scaleToFill" bindtap="cao" src="https://www.52bjy.com/api/avatar/show.php?username={{username}}&size=large" />
+		<view class="sbf" wx:if="{{flag}}">
+			<view class="header_name">
+				<view>Hello {{nickNames}}</view>
+				<button class="header_compile" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{phone}}">绑定手机</button>
+			</view>
+			<view class="header_num" bindtap="toybDetail">猿宝: {{yb_num}} ></view>
+		</view>
+		<button bindtap="goAuth" class="wei" wx:else>点击登录</button>
+	</view>
+	<!-- 回收成绩 -->
+	<view class="my_recycle">
+		<view class="recycle_title">回收成绩</view>
+		<view class="recycle_inner">
+			<view class="every_inner">
+				<image mode="scaleToFill" src="../../images/my01.png" />
+				<view>节约水资源</view>
+				<view>{{shui}}</view>
+			</view>
+			<view class="every_inner">
+				<image mode="scaleToFill" src="../../images/my02.png" />
+				<view>减少碳排放</view>
+				<view>{{tan}}</view>
+			</view>
+			<view class="every_inner">
+				<image mode="scaleToFill" src="../../images/my03.png" />
+				<view>节约石油</view>
+				<view>{{shiyou}}</view>
+			</view>
+		</view>
+	</view>
+	<!-- 我的兑换 -->
+	<view class="my_conver">
+		<view class="conver_title">我的兑换</view>
+		<view class="conver_innert">
+			<view class="every_inner" bindtap="toStayPayment" data-num='2'>
+				<image mode="scaleToFill" src="../../images/my04.png" />
+				<view>待付款</view>
+			</view>
+			<view class="every_inner" bindtap="toStayPayment" data-num='3'>
+				<image mode="scaleToFill" src="../../images/my05.png" />
+				<view>待发货</view>
+			</view>
+			<view class="every_inner" bindtap="toStayPayment" data-num='4'>
+				<image mode="scaleToFill" src="../../images/my06.png" />
+				<view>待收货</view>
+			</view>
+			<view bindtap="goServer" class="every_inner iso">
+				<image mode="scaleToFill" src="../../images/my07.png" />
+				<view>售后/客服</view>
+				<!-- <contact-button tnt-inst-id="KLb_gKT0" scene="SCE00207272" alipay-card-no="{{userid}}" /> -->
+			</view>
+		</view>
+	</view>
+	<!-- 下方 -->
+
+	<view class="my_collectad">
+		<view class="collect_every" bindtap="toCollect">
+			<image mode="scaleToFill" src="../../images/my08.png" />
+			<view>我的收藏</view>
+		</view>
+		<view class="collect_every" bindtap="toAddress">
+			<image mode="scaleToFill" src="../../images/my09.png" />
+			<view>地址管理</view>
+		</view>
+		<view class="collect_every" bindtap="toMessage">
+			<image mode="scaleToFill" src="../../images/my10.png" />
+			<view>消息中心</view>
+		</view>
+		<view class="collect_every" bindtap="toShare">
+			<image mode="scaleToFill" src="../../images/my11.png" />
+			<view>分享好友</view>
+		</view>
+	</view>
+
+	<view class="my_collecttwo">
+		<view class="collect_every" bindtap="toAbout">
+			<image mode="scaleToFill" src="../../images/my12.png" />
+			<view>关于我们</view>
+		</view>
+	</view>
+
+	<view class="quit" wx:if="{{flag}}" bindtap="removeMy" >退出登录</view>
+
+</view>

@@ -1,0 +1,136 @@
+/* pages/index/succeed/succeed.wxss */
+.succeed{
+  width: 750rpx;
+  border-radius: 10px;
+  height: auto;
+}
+.ins_swiper{
+  width: 710rpx;
+  margin: 0 auto;
+}
+.succeed .header{
+  width: 695rpx;
+  height: 170rpx;
+  margin-left: 27rpx;
+}
+/* 内容 */
+.succeed .inner{
+  width: 710rpx;
+  height: auto;
+  margin: 0rpx auto;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  background: #ffffff;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+  border: 1px solid #39B8D2;
+  padding: 35rpx;
+}
+/* 1 */
+.succeed .inner .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.succeed .inner .title .pho{
+  display: flex;
+  align-items: center;
+}
+.succeed .inner .title .pho image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.succeed .inner .title .pho text{
+  color: rgba(49, 192, 168, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+.succeed .inner .title .time{
+  color: rgba(102, 102, 102, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+/* 2 */
+.succeed .inner .user{
+  margin: 16rpx 0;
+}
+.succeed .inner .user .every view{
+  color: #777777;
+  font-size: 27rpx;
+  font-family: PingFangSC-regular;
+  line-height: 45rpx;
+  margin-left: 60rpx;
+}
+.succeed .inner .user .every text{
+  color: #777777;
+  font-size: 27rpx;
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+  display: inline-block;
+  width: 430rpx;
+}
+.succeed .inner .user .every{
+  display: flex;
+}
+/* 3 */
+.succeed .inner .grant{
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #dedede;
+  padding-top: 30rpx;
+}
+.succeed .inner .grant image{
+  width: 32rpx;
+  height: 32rpx;
+  margin:0 13rpx;
+}
+.succeed .inner .grant text{
+  color: rgba(49, 192, 168, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+/* 4 */
+.succeed .num{
+  display: flex;
+  align-items: center;
+  margin: 16rpx 60rpx;
+}
+.succeed .num view{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  margin-right: 12rpx;
+}
+.succeed .num text{
+  text-indent: 20rpx;
+  color: #777777;
+  font-size: 27rpx;
+  font-family: PingFangSC-regular;
+}
+
+/* 商城兑换 */
+.succeed .store{
+  width: 710rpx;
+  height: 206rpx;
+  margin: 24rpx auto;
+  background: #dedede;
+  border-radius: 20rpx;
+}
+
+.succeed_down{
+  position: fixed;
+  bottom: 60rpx;
+  left: 20rpx;
+  width: 710rpx;
+  height: 90rpx;
+  border: 1px solid #31C0A8;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size:36rpx;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(43,217,201,1);
+}

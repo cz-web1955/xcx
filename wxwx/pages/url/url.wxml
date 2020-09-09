@@ -1,0 +1,3 @@
+<!--pages/url/url.wxml-->
+<web-view src="{{urlId}}" onMessage="onMessage" id="web-view-1">
+</web-view>

@@ -1,0 +1,42 @@
+<!--pages/index/succeed/succeed.wxml-->
+<view class="succeed">
+
+  <image class="header" mode="scaleToFill" src="../../../images/succeed_one.png"/>
+
+  <!-- 内容 -->
+  <view class="inner">
+    <view class="title">
+      <view class="pho">
+        <image mode="scaleToFill" src="../../../images/succeed_two.png"/><text>订单信息确认</text>
+      </view>
+      <view class="time">{{timeauto}}</view>
+    </view>
+    <view class="user" wx:for="{{sceeList}}" wx:key="index">
+      <view class="every">
+        <view class="txt">您的姓名：</view><text>{{item.name}}</text>
+      </view>
+      <view class="every">
+        <view class="txt">您的电话：</view><text>{{item.phone}}</text>
+      </view>
+      <view class="every">
+        <view class="txt">您的地址：</view><text>{{item.pro}}{{item.city}}{{item.coun}}{{item.addre}}</text>
+      </view>
+    </view>
+    <view class="grant">
+      <image mode="scaleToFill" src="../../../images/succeed_three.png"/><text>用户权益发放</text>
+    </view>
+    <view class="num">
+      <text>每公斤5个猿宝</text>
+    </view>
+  </view>
+
+  <swiper style="height:120px;" indicator-dots='true' indicator-color='#999999' indicator-active-color='#333333' circular='true' interval='3000' autoplay='true' class="ins_swiper">
+    <block wx:for="{{shopList}}" wx:key='index'>
+      <swiper-item >
+        <image style="width:100%;height:120px;margin:0 auto;border-radius:15rpx" mode="scaleToFill" data-url="{{item.url}}" src="{{item.image_src}}" bindtap="{{item.introduce}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="succeed_down" bindtap="showIndex">关闭</view>

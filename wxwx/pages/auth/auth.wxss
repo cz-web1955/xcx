@@ -1,0 +1,47 @@
+.auth{
+  width: 750rpx;
+  height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+}
+.auth .middle{
+  width: 700rpx;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 140rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /* background: #ffffff; */
+}
+.auth .middle image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  /* background: red; */
+}
+.auth .middle view{
+  color: rgba(49, 192, 168, 1);
+  font-size: 36rpx;
+  font-family: 方正准圆-标准;
+  line-height: 90rpx;
+}
+.auth .middle button{
+  width: 600rpx;
+  height: 120rpx;
+  background: #31C0A8 ;
+  border-radius: 50rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 120rpx;
+  font-family: PingFangSC-regular;
+  border: none;
+  margin: 40rpx 0;
+}
+.auth .middle text{
+  color: rgba(136, 136, 136, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  margin-top: 20rpx;
+}

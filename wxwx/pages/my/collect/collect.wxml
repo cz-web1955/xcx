@@ -1,0 +1,30 @@
+<!--pages/my/collect/collect.wxml-->
+<view class="collect">
+<view wx:if="{{collectList.length}}">
+  <block wx:for="{{collectList}}" wx:key='index'>
+    <view class="whites">
+      <view class="title" bindtap="goShopg" data-id='{{item.tid}}'>
+        <view class="sps iconfont iconshangpin"></view>
+        <view class="asd">商品信息</view>
+        <view class="ssr iconfont iconarrow-right"></view>
+      </view>
+    <view class="inner" >
+      <view class="photo"><image mode="scaleToFill" src="{{item.thumb}}"/></view>
+      <view class="txt">
+        <view>{{item.title}}</view>
+        <view class="price">
+          <view class="num">
+            <text>￥{{item.integral}} +</text>
+            <text class="nsb iconfont iconyuanbao"></text>
+            <text>{{item.price}}</text>
+          </view>
+          <view class="del" bindtap="shopDel" data-id="{{item.itemid}}">删除</view>
+        </view>
+      </view>
+    </view>
+    </view>
+  </block>
+</view>
+
+  <view class="els" wx:else><view>您还没有收藏，快<text bindtap="goShopa">去商城看看</text>吧</view></view>
+</view>

@@ -1,0 +1,104 @@
+/* pages/my/address/address.wxss */
+.address_inner{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: center;
+  line-height: 150rpx;
+}
+
+/* 内容 */
+.address_cis{
+  width: 750rpx;
+  height: auto;
+  padding-bottom: 140rpx;
+}
+.address_cis .every{
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 20rpx 28rpx;
+  margin: 10rpx 0;
+}
+.address_cis .every .names text{
+  color: rgba(16, 16, 16, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+.address_cis .every .names text:nth-child(2){
+  margin-left: 40rpx;
+}
+.address_cis .every .city{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 40rpx;
+  margin: 14rpx 0; 
+}
+
+
+.address_cis .every .select{
+  display: flex;
+  justify-content: space-between;
+}
+.address_cis .every .select .tw{
+  display: flex;
+  align-items: center;
+}
+.address_cis .every .select .tw .nas{
+  color: red;
+  font-size: 23px;
+}
+.address_cis .every .select .tw .dels{
+  color: red;
+}
+.address_cis .every .select .tw image{
+  margin: 0;
+}
+.address_cis .every .select image{
+  width: 48rpx;
+  height: 48rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10rpx
+}
+.address_cis .every .select text{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-bold;
+  font-weight: 600;
+}
+
+/* 下方两个按钮 */
+.address_text{
+  width: 750rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: #f5f5f5;
+}
+.address_text image{
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 15rpx;
+}
+.address_text view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+.address_text .address_two{
+  width: 330rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  border-radius: 20rpx;
+  align-items: center;
+  background: #ffffff;
+  margin-top: 15rpx;
+}
+.address_text .address_two image{
+  margin: 0 15rpx 0 0rpx;
+}

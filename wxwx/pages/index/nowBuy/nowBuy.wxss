@@ -1,0 +1,208 @@
+/* pages/index/nowBuy/nowBuy.wxss */
+.now_buy{
+  width: 750rpx;
+  height: auto;
+  padding-bottom: 88rpx;
+}
+/* 头部购买人信息 */
+.buy_user{
+  width: 750rpx;
+  height: auto;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #E8E8E8;
+}
+.buy_user image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.buy_user .weizhi{
+  color: #31C0A8;
+  font-size: 25px;
+}
+.buy_user .ris{
+  font-size: 23px;
+}
+.now_buy .buy_user .sw{
+  margin-left: 5rpx;
+}
+.buy_user .ou{
+  width: 24rpx;
+  height: 24rpx;
+}
+.buy_user .txt view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+}
+.buy_user .txt view text{
+  margin-left: 15rpx;
+}
+
+/* 商品信息 */
+.buy_shop{
+  width: 750rpx;
+  height: auto;
+  position: relative;
+}
+.buy_shop .title{
+  display: flex;
+  width: 750rpx;
+  height: 84rpx;
+  background: #ffffff;
+  align-items: center;
+}
+.buy_shop .title .sps{
+  color: #31C0A8;
+  font-size: 23px;
+  margin: 0 10px;
+}
+.buy_shop .title .oo{
+  color: rgba(16, 16, 16, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+.buy_shop .title image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 26rpx;
+}
+.now_buy .buy_user .txt{
+  width: 600rpx;
+  height: auto;
+}
+.buy_shop .inner{
+  width: 750rpx;
+  height: 200rpx;
+  background: #f2f2f2;
+  box-sizing: border-box;
+  padding: 16rpx 14rpx;
+  display: flex;
+}
+.buy_shop .inner .txt{
+  width: 530rpx;
+  margin-top: 10rpx;
+}
+.buy_shop .inner .photo{
+  width: 166rpx;
+  height: 166rpx;
+  margin-right: 18rpx;
+}
+.buy_shop .inner .photo image{
+  width: 166rpx;
+  height: 166rpx;
+}
+.buy_shop .inner .txt view{
+  font-family: PingFangSC-regular;
+  line-height: 45rpx;
+}
+.buy_shop .inner .txt view:nth-child(1){
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+}
+.buy_shop .inner .txt view:nth-child(2){
+  color: #A4A4A4;
+  font-size: 24rpx;
+}
+.buy_shop .inner .txt .price{
+  display: flex;
+  justify-content: space-between;
+}
+.buy_shop .inner .txt .price view{
+  color: #A4A4A4;
+  font-size: 26rpx;
+  font-family: PingFangSC-regular;
+}
+.buy_shop .inner .txt .price .audi{
+  position: absolute;
+  right: 10rpx;
+  bottom: 90rpx;
+}
+.buy_shop .inner .txt .price .audi .nsb{
+  color: #FFB640;
+  margin: 0 4rpx;
+}
+.buy_shop .inner .txt .price .audi image{
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.buy_shop .inner .txt .price .audi text:nth-child(1){
+  color: #31C0A8;
+  font-size: 26rpx;
+}
+.buy_shop .inner .txt .price .audi text:nth-child(3){
+  color: #FFB640;
+  font-size: 26rpx;
+}
+.buy_shop .num{
+  width: 750rpx;
+  height: 70rpx;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 14rpx;
+}
+.buy_shop .num view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+
+/* 下方支付按钮 */
+.buy_end{
+  width: 750rpx;
+  height: 88rpx;
+  background: #ffffff;
+  position: fixed;
+  bottom: 0;
+  /* top: calc(100vh - 88rpx); */
+  left: 0;
+  display: flex;
+}
+.buy_end .submit{
+  width: 240rpx;
+  height: 88rpx;
+  background: #31C0A8;
+  text-align: center;
+  line-height: 88rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+}
+.buy_end .left{
+  width: 510rpx;
+  height: 88rpx;
+}
+.buy_end .left image{
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.buy_end .left .nsb{
+  color: #FFB640;
+  
+}
+.buy_end .left text{
+  font-size: 28rpx;
+  line-height: 88rpx;
+  margin-left: 5rpx;
+}
+.buy_end .left text:nth-child(1){
+  color: #101010;
+  margin-left: 24rpx;
+}
+.buy_end .left text:nth-child(2){
+  color: #31C0A8;
+}
+.buy_end .left text:nth-child(4){
+  color: #FFB640;
+}

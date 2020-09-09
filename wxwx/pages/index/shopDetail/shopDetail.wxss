@@ -1,0 +1,427 @@
+/* pages/index/shopDetail/shopDetail.wxss */
+@import "../../../js/wxParse.wxss";
+.shop_detail{
+  width: 750rpx;
+  height: auto;
+  padding-bottom: 100rpx;
+}
+.title_price{
+  width: 750rpx;
+  height: 100rpx;
+  background: #31C0A8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 18rpx;
+}
+.title_price .atten{
+  color: rgba(232, 232, 232, 1);
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+}
+.title_price image{
+  width: 36rpx;
+  height: 36rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.title_price .every text{
+  color: rgba(255, 255, 255, 1);
+  font-family: PingFangSC-regular;
+  margin: 0 5rpx;
+}
+.title_price .every .nsb{
+  color: #FEAD29
+}
+ .title_price .every text:nth-child(1){
+  font-size: 46rpx;
+}
+ .title_price .every text:nth-child(2){
+  font-size: 46rpx;
+}
+.title_price .every text:nth-child(3){
+  font-size: 38rpx;
+}
+.title_price .every text:nth-child(5){
+  font-size: 40rpx;
+  color: #FEAD29;
+  font-weight: 600;
+}
+.title_price .every text:nth-child(6){
+  font-size: 28rpx;
+  text-decoration: line-through;
+  color: #E8E8E8;
+}
+/* 商品内容 */
+.shop_inner{
+  width: 750rpx;
+  height: auto;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 20rpx 24rpx;
+}
+.shop_inner .tit{
+  color: rgba(16, 16, 16, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-bold;
+  line-height: 40rpx;
+}
+.shop_inner .refund{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.shop_inner .refund view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+.shop_inner .refund view:nth-child(2){
+  color: #A4A4A4;
+}
+
+/* 店铺 */
+.shop_store{
+  width: 750rpx;
+  height: 144rpx;
+  background: #ffffff;
+  margin: 20rpx 0;
+  display: flex;
+  align-items: center;
+}
+.shop_store .photo{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 20rpx;
+}
+.shop_store .photo image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 15rpx;
+  /* background: red; */
+}
+.shop_store .inner view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-bold;
+  line-height: 55rpx;
+}
+.shop_store .inner view:nth-child(2){
+  color: rgba(164, 164, 164, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+
+/*商品详情图片展示  */
+.shop_pho{
+  width: 750rpx;
+  height: auto;
+}
+.shop_pho view{
+  text-align: center;
+  color: rgba(16, 16, 16, 1);
+  font-size: 36rpx;
+  font-family: PingFangSC-regular;
+  line-height: 80rpx;
+  background: #ffffff;
+}
+.shop_pho image{
+  width: 750rpx;
+  height: 676rpx;
+  background: #dedede;
+  font-size: 0;
+}
+
+/* 兑换说明 */
+.shop_txt{
+  width: 750rpx;
+  height: auto;
+  background: #ffffff;
+  margin: 20rpx 0;
+  box-sizing: border-box;
+  padding: 26rpx 28rpx;
+}
+.shop_txt view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 45rpx;
+}
+.shop_txt .title{
+  font-size: 36rpx;
+  text-align: center;
+}
+
+/* 看了又看 */
+.shop_look{
+  width: 750rpx;
+  height: auto;
+}
+.shop_look .title{
+  text-align: center;
+  color: rgba(49, 192, 168, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+  line-height: 80rpx;
+}
+.shop_look .inner{
+  display: flex;
+  flex-wrap: wrap;
+}
+.shop_look .every{
+  width: 344rpx;
+  height: auto;
+  background: #ffffff;
+  border-radius: 15rpx;
+  margin: 0 0 20rpx 20rpx;
+}
+.shop_look .every image{
+  width: 344rpx;
+  height: 344rpx;
+  background: red;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+.shop_look .every .text{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.shop_look .every .text view:nth-child(1){
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.shop_look .every .text view:nth-child(2){
+  color: rgba(49, 192, 168, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+}
+.shop_look .every .text image{
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  background: none;
+  vertical-align: middle;
+}
+.shop_look .every .text .nsb{
+  color: #FEAD29;
+  margin: 0 4rpx;
+}
+
+/* 下方点击操作 */
+.shop_end{
+  width: 750rpx;
+  height: 100rpx;
+  background: #ffffff;
+  /* margin: 15rpx 0 40rpx 0; */
+  display: flex;
+  justify-content: space-around;
+  align-items:flex-end;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.shop_end .every{
+  position: relative;
+  /* margin: 0 30rpx; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+.shop_end .ona{
+  margin-left: 40rpx;
+}
+.shop_end .every .ser{
+  /* text-align: center; */
+  font-size: 25px;
+  /* margin-left: 15rpx; */
+}
+contact-button{position: absolute;right: 0;top: 0;width: 70rpx;height: 70rpx;
+  opacity: 0;
+}
+.shop_end image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.shop_end .txt{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: left;
+}
+
+.shop_end .submit{
+  display: flex;
+  color: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  line-height: 80rpx;
+  margin-bottom: 10rpx
+}
+.shop_end .submit button:nth-child(1){
+  color: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  line-height: 80rpx;
+  border: none;
+  outline: 0;
+  width: 250rpx;
+  height: 80rpx;
+  background: #39B7D2;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+}
+.shop_end .submit button:nth-child(2){
+  color: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  line-height: 80rpx;
+  border: none;
+  outline: 0;
+  width: 250rpx;
+  height: 80rpx;
+  background: #4AD7CC;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+}
+.shop_end .submit view:nth-child(1){
+  width: 250rpx;
+  height: 80rpx;
+  background: #39B7D2;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+}
+.shop_end .submit view:nth-child(2){
+  width: 250rpx;
+  height: 80rpx;
+  background: #4AD7CC;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+}
+
+/* 遮罩层 */
+.shade{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* height: calc(100vh - 100rpx); */
+  bottom: 100rpx;
+  background:rgba(0, 0, 0, 0.8);   
+  overflow: hidden;   
+  z-index: 1; 
+  display: none;  
+}
+.show{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* height: calc(100vh - 100rpx); */
+  bottom: 100rpx;
+  background:rgba(0,0,0,0.5);   
+  overflow: hidden;   
+  z-index: 1; 
+  display: block; 
+}
+.shopDetail_select{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+  height: 500rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 16rpx 24rpx;
+  z-index: 3;
+  display: block;
+}
+.shopDetail_select .taba{
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  font-size: 46rpx;
+  color: #666666;
+  /* font-weight: 600; */
+}
+.shopDetail_select .price{
+  display: flex;
+
+}
+.shopDetail_select .price .photos{
+  position: relative;
+  width: 180rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.shopDetail_select .price .money view{
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+}
+.shopDetail_select .price .money view image{
+  width: 32rpx;
+  height: 32rpx;
+  margin: 0 6rpx;
+  position: static;
+  background: none;
+}
+.shopDetail_select .price .money view .nsb{
+  color: #FEAD29;
+  margin: 0 4rpx;
+}
+.shopDetail_select .price .money view:nth-child(1){
+  color: rgba(49, 192, 168, 1);
+  font-size: 36rpx;
+}
+.shopDetail_select .price .money view:nth-child(2){
+  color: rgba(164, 164, 164, 1);
+  font-size: 28rpx;
+}
+.shopDetail_select .price image{
+  width: 180rpx;
+  height: 180rpx;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: 0rpx;
+}
+
+.shopDetail_select .speci{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  width: 600rpx;
+  margin: 20rpx 0; 
+}
+.shopDetail_select .every{
+  display: flex;
+  flex-wrap: wrap;
+  width: 800rpx;
+  margin: 0;
+}
+.shopDetail_select .every view{
+  width: 120rpx;
+  height: 60rpx;
+  background: #E8E8E8;
+  text-align: center;
+  line-height: 60rpx;
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  margin: 10rpx 10rpx;
+  border-radius: 15rpx;
+}
+.shopDetail_select .every .act{
+  color: #ffffff;
+  background: #31C0A8 ;
+}

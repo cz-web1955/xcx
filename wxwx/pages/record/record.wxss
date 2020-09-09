@@ -1,0 +1,223 @@
+/* pages/record/record.wxss */
+.record{
+  width: 750rpx;
+  height: auto;
+  /* padding-bottom: 270rpx; */
+}
+
+/* 导航栏选择 */
+.record_header{
+  width: 750rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  /* border-bottom: 1px solid #D7CFCF; */
+}
+.record_header .active {
+  position: relative;
+} 
+.record_header .active::after{
+  content: '';
+  width: 100%;
+  height: 5rpx;
+  background: #31C0A8;
+  display: inline-block;
+  position: absolute;
+  bottom: -24rpx;
+  left: 0;
+}
+/* 没有数据 */
+.record .nothing{
+  color: rgba(215, 207, 207, 1);
+  font-size: 32rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+.record .nothing image{
+  width: 223rpx;
+  height: 192rpx;
+}
+.record .nothing .sub{
+  color: #31C0A8 ;
+  text-decoration: underline;
+}
+/* 有数据 */
+ .record_service{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1px solid #31C0A8;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: #ffffff;
+  bottom: 40rpx;
+  right: 20rpx;
+}
+.sesr{
+  font-size: 35px;
+}
+.record_service .sadd{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+
+
+
+.record .inner .record_detail{
+  width: 668rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.record_detail .time{
+  color: rgba(162, 161, 161, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  margin: 20rpx 20rpx;
+}
+
+
+.record_detail .mess{
+  width: 668rpx;
+  height: auto;
+  background: #ffffff;
+  border-radius: 20rpx;
+}
+/* 订单详情头部 */
+.record_detail .mess  image{
+  width: 44rpx;
+  height: 44rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10rpx;
+}
+.record_detail .mess  .imgo{
+  width: 24rpx;
+  height: 24rpx;
+}
+.record_detail .mess .mess_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 668rpx;
+  height: 94rpx;
+  background: #A2A1A1;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.record_detail .mess .mess_titletwo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 668rpx;
+  height: 94rpx;
+  background: #31C0A8;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.record_detail .mess .mess_txt{
+  line-height: 94rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+/* 订单人信息 */
+.record_detail .mess_inner .every .every_txt{
+  color: rgba(162, 161, 161, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 45rpx;
+}
+.record_detail .mess_inner .every .every_txttwo{
+  color: #31C0A8;
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 45rpx;
+}
+.record_detail .every .tit{
+  color: #31C0A8 ;
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 45rpx;
+  width: 140rpx;
+}
+.record_detail .mess_inner .every text{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 45rpx;
+  display: inline-block;
+  width: 460rpx;
+}
+.record_detail .mess_inner{
+  box-sizing: border-box;
+  padding: 18rpx 32rpx;
+}
+.record_detail .mess_inner .every{
+  display: flex;
+}
+
+
+.liyg{
+  width: 750rpx;
+  height: 100vh;
+  background: #ffffff;
+}
+.liyg .middle{
+  width: 700rpx;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 140rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background: #ffffff;
+}
+.liyg .middle image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  /* background: red; */
+}
+.liyg .middle view{
+  color: rgba(49, 192, 168, 1);
+  font-size: 36rpx;
+  font-family: 方正准圆-标准;
+  line-height: 90rpx;
+}
+.liyg .middle button{
+  width: 480rpx;
+  height: 100rpx;
+  background: #31C0A8 ;
+  border-radius: 50rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-family: PingFangSC-regular;
+  border: none;
+  margin: 40rpx 0;
+}
+.liyg .middle text{
+  color: rgba(136, 136, 136, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  margin-top: 20rpx;
+}
+
+contact-button{position: absolute;right: 0;top: 0;width: 100%;height: 100%;opacity: 0;}

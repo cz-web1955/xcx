@@ -1,0 +1,26 @@
+<!--pages/index/exchange/exchange.wxml-->
+<view class="hahaha">
+  <swiper style="height:120px;" indicator-dots='true' indicator-color='#999999' indicator-active-color='#333333' circular='true' interval='3000' autoplay='true' class="exshops">
+    <block wx:for="{{shoList}}" wx:key='index'>
+      <swiper-item >
+        <image style="width:100%;height:120px;" src="{{item.image_src}}" data-url="{{item.url}}" bindtap="{{item.introduce}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="exchange"><image mode="scaleToFill" src="../../../images/exTitle.png"/></view>
+    <view class="exchange_recom">
+      <view class="title">为您推荐</view>
+      <block wx:for="{{shopList}}" wx:key="index">
+        <view class="every">
+          <view bindtap="goDetail" data-id="{{item.itemid}}">
+            <image mode="scaleToFill" src="{{item.thumb}}" />
+              <view class="text">
+                <view>{{item.title}}</view>
+                <view>￥{{item.integral}} +
+                <text class="nsb iconfont iconyuanbao"></text><text class="pr">{{item.price}}</text></view>
+              </view>
+          </view>
+        </view>
+      </block>
+    </view>
+</view>

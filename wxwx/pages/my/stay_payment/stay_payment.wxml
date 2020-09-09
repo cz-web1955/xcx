@@ -1,0 +1,167 @@
+<!--pages/my/stay_payment/stay_payment.wxml-->
+<!-- 导航栏选择 -->
+<view class="staymonney">
+  <view class="staymonney_header" >
+    <view class="{{curHdIndex=='1'? 'active' : ''}}" id="1" bindtap="tab">全部</view>
+    <view class="{{curHdIndex=='2'? 'active' : ''}}" id="2" bindtap="tab">待付款</view>
+    <view class="{{curHdIndex=='3'? 'active' : ''}}" id="3" bindtap="tab">待发货</view>
+    <view class="{{curHdIndex=='4'? 'active' : ''}}" id="4" bindtap="tab">已发货</view>
+  </view>
+
+  <!-- 全部 -->
+  <view>
+  <view class="staymonney_inner" wx:if="{{curHdIndex==1}}" wx:for="{{allList}}" wx:key="index">
+    <view class="shoping_title">
+      <view class="messge">
+        <view class="sps iconfont iconshangpin"></view>
+        <view>商品信息</view>
+      </view>
+      <view class="metit" >{{statusList[item.status].text}}</view>
+      <view class="metit" wx:if="{{item.status=='8'}}">买家关闭</view>
+      <view class="metit" wx:if="{{item.status=='9'}}">卖家关闭</view>
+    </view>
+    <view class="shoping_inner">
+    <view class="fhoto"><image mode="scaleToFill" src="{{item.thumb}}"/></view>
+      <view class="name">
+        <view class="name_y">{{item.title}}</view>
+        <view>{{item.note}}</view>
+        <view>运费：￥{{item.fee}}</view>
+      </view>
+      <view class="price">
+        <view>￥{{item.integral}}</view>
+        <view class="price_y">x{{item.number}}</view>
+      </view>
+    </view>
+    <view class="shoping_price">
+      <view>实付 :<text>￥{{item.allPrive}} +</text><text class="nsb iconfont iconyuanbao"></text><text class="qian">{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{curHdIndex==1&&allList.length<=0}}" class="srs">
+    <image mode="scaleToFill" src="../../../images/cas.png"/>
+    <view>暂时没有订单，<text bindtap="goShopa">去逛逛~</text></view>
+  </view>
+
+  </view>
+
+<!-- 代付款 -->
+<view>
+  
+
+  <view class="staymonney_inner" wx:if="{{curHdIndex==2}}" wx:for="{{payList}}" wx:key="index">
+    <view class="shoping_title">
+      <view class="messge">
+        <!-- <image mode="scaleToFill" src="../../../images/shoping.png"/> -->
+        <view class="sps iconfont iconshangpin"></view>
+        <view>商品信息</view>
+        <!-- <image mode="scaleToFill" src="../../../images/right.png"/ class="rig"> -->
+      </view>
+      <view class="metit">待支付</view>
+    </view>
+    <view class="shoping_inner">
+    <view class="fhoto"><image mode="scaleToFill" src="{{item.thumb}}"/></view>
+      <view class="name">
+        <view class="name_y">{{item.title}}</view>
+        <view>{{item.note}}</view>
+        <view>运费：￥{{item.fee}}</view>
+      </view>
+      <view class="price">
+        <view>￥{{item.integral}}</view>
+        <view class="price_y">x{{item.number}}</view>
+      </view>
+    </view>
+    <view class="shoping_price">
+      <view>实付 :<text>￥{{item.allPrive}} +</text><text class="nsb iconfont iconyuanbao"></text><text class="qian">{{item.price}}</text>
+      </view>
+    </view>
+    <view class="shoping_select" wx:if="{{curHdIndex==2}}">
+      <view bindtap="delOrder" data-id="{{item.itemid}}">删除订单</view>
+      <view bindtap="goBuy" data-id="{{item.mallid}}" data-integral="{{item.integral}}" data-note="{{item.note}}" data-title="{{item.title}}" data-thumb="{{item.thumb}}" data-price="{{item.price}}" data-fee="{{item.fee}}" data-seller="{{item.seller}}" data-gid="{{item.gid}}">去支付</view>
+    </view>
+  </view>
+
+  <view wx:if="{{curHdIndex==2&&payList.length<=0}}" class="srs">
+    <image mode="scaleToFill" src="../../../images/cas.png"/>
+    <view>暂时没有订单，<text bindtap="goShopa">去逛逛~</text></view>
+  </view>
+
+  </view>
+
+<!-- 代发货 -->
+<view>
+  
+  <view class="staymonney_inner" wx:if="{{curHdIndex==3}}" wx:for="{{deliverList}}" wx:key="index">
+    <view class="shoping_title">
+      <view class="messge">
+        <!-- <image mode="scaleToFill" src="../../../images/shoping.png"/> -->
+        <view class="sps iconfont iconshangpin"></view>
+        <view class="ssadd">商品信息</view>
+        <!-- <image mode="scaleToFill" src="../../../images/right.png"/ class="rig"> -->
+      </view>
+      <view class="metit">待发货</view>
+    </view>
+    <view class="shoping_inner">
+    <view class="fhoto"><image mode="scaleToFill" src="{{item.thumb}}"/></view>
+      <view class="name">
+        <view class="name_y">{{item.title}}</view>
+        <view>{{item.note}}</view>
+        <view>运费：￥{{item.fee}}</view>
+      </view>
+      <view class="price">
+        <view>￥{{item.integral}}</view>
+        <view class="price_y">x{{item.number}}</view>
+      </view>
+    </view>
+    <view class="shoping_price">
+      <view>实付 :<text>￥{{item.allPrive}} +</text><text class="nsb iconfont iconyuanbao"></text><text class="qian">{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+
+<view wx:if="{{curHdIndex==3&&deliverList.length<=0}}" class="srs">
+    <image mode="scaleToFill" src="../../../images/cas.png"/>
+    <view>暂时没有订单，<text bindtap="goShopa">去逛逛~</text></view>
+  </view>
+
+  </view>
+
+<!-- 已发货 -->
+
+<view>
+
+  <view class="staymonney_inner" wx:if="{{curHdIndex==4}}" wx:for="{{yetList}}" wx:key="index">
+    <view class="shoping_title">
+      <view class="messge">
+        <!-- <image mode="scaleToFill" src="../../../images/shoping.png"/> -->
+        <view class="sps iconfont iconshangpin"></view>
+        <view>商品信息</view>
+        <!-- <image mode="scaleToFill" src="../../../images/right.png"/ class="rig"> -->
+      </view>
+      <view class="metit">已发货</view>
+    </view>
+    <view class="shoping_inner">
+    <view class="fhoto"><image mode="scaleToFill" src="{{item.thumb}}"/></view>
+      <view class="name">
+        <view class="name_y">{{item.title}}</view>
+        <view>{{item.note}}</view>
+        <view>运费：￥{{item.fee}}</view>
+      </view>
+      <view class="price">
+        <view>￥{{item.integral}}</view>
+        <view class="price_y">x{{item.number}}</view>
+      </view>
+    </view>
+    <view class="shoping_price">
+      <view>实付 :<text>￥{{item.allPrive}} +</text><text class="nsb iconfont iconyuanbao"></text><text class="qian">{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{curHdIndex==4&&yetList.length<=0}}" class="srs">
+    <image mode="scaleToFill" src="../../../images/cas.png"/>
+    <view>暂时没有订单，<text bindtap="goShopa">去逛逛~</text></view>
+  </view>
+
+  </view>
+</view>

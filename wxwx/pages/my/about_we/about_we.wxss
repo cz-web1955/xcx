@@ -1,0 +1,20 @@
+/* pages/my/about_we/about_a.wxss */
+.about_we .title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 750rpx;
+  height: 112rpx;
+  border-bottom: 1rpx solid #E8E8E8;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+}
+.about_we .title image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.about_we .title view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}

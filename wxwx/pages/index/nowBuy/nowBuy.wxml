@@ -1,0 +1,54 @@
+<!--pages/index/nowBuy/nowBuy.wxml-->
+
+<view class="now_buy">
+  <!-- 头部购买人信息 -->
+  <view class="buy_user" bindtap="goAddr">
+    <view class="weizhi iconfont iconlbsfill"></view>
+    <view class="txt" wx:if="{{buyer_name}}">
+      <view>{{buyer_name}} <text>{{buyer_mobile}}</text></view>
+      <view>{{addrePro}} {{addreCity}} {{addreCoun}} {{addreAd}}</view>
+    </view>
+    <view class="txt" wx:else>您还没有选择默认地址</view>
+    <view class="ris iconfont iconarrow-right"></view>
+  </view>
+
+  <!-- 商品信息 -->
+  <view class="buy_shop" wx:for="{{placeList}}" wx:key="index">
+    <view class="title">
+      <view class="sps iconfont iconshangpin"></view>
+      <view class="oo">商品信息</view>
+    </view>
+    <view class="inner" >
+      <view class="photo"><image mode="scaleToFill" src="{{item.thumb}}"/></view>
+      <view class="txt">
+        <view>{{item.title}}</view>
+        <view wx:if="{{s1}}">规格：{{s1}}</view>
+        <view wx:if="{{s2}}">规格：{{s2}}</view>
+        <view class="price">
+          <view>运费：￥{{item.fee_start_1}}</view>
+          <view class="audi">
+            <text>￥{{item.integral}} +</text>
+            <text class="nsb iconfont iconyuanbao"></text>
+            <text>{{item.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="num">
+      <view>购买数量</view>
+      <view>x1</view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 下方支付按钮   -->
+<view class="buy_end">
+  <view class="left">
+    <text>实付款：</text>
+    <text>￥{{pricess}} +</text>
+    <text class="nsb iconfont iconyuanbao"></text>
+    <text>{{placeList[0].price}}</text>
+  </view>
+  <view class="submit" bindtap="nowBuy">立即支付</view>
+</view>

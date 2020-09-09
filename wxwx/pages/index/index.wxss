@@ -1,0 +1,254 @@
+/**index.wxss**/
+.inners_swiper{
+  width: 710rpx;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.index_header{
+  width: 750rpx;
+  height: 460rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.index_header .tw{
+  width: 344rpx;
+  height: 344rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  animation: yellow-o 8s infinite;
+  
+}
+@keyframes yellow-o {
+    0% {
+        background: rgb(245, 245, 245,0.4);
+    }
+    20% {
+        background: rgb(245, 245, 245,0.2);
+    }
+    40% {
+        background: rgb(245, 245, 245,0.4);
+    }
+    60% {
+        background: rgb(245, 245, 245,0.2);
+    }
+    80% {
+        background: rgb(245, 245, 245,0.4);
+    }
+    100% {
+        background: rgb(222, 222, 222,0.2);
+    }
+}
+.index_header .tw .on{
+  width: 314rpx;
+  height: 314rpx;
+  position: absolute;
+  top: 15rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  animation: yellow-orange 8s infinite;
+}
+ @keyframes yellow-orange {
+    0% {
+        background: rgb(245, 245, 245,0.2);
+    }
+    20% {
+        background: rgb(245, 245, 245,0.4);
+    }
+    40% {
+        background: rgb(245, 245, 245,0.2);
+    }
+    60% {
+        background: rgb(245, 245, 245,0.4);
+    }
+    80% {
+        background: rgb(245, 245, 245,0.2);
+    }
+    100% {
+        background: rgb(222, 222, 222,0.4);
+    }
+}
+.index_header image:nth-child(1){
+  width: 750rpx;
+  height: 500rpx;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0;
+}
+.index_header .tw .on image{
+  width: 294rpx;
+  height: 294rpx;
+  margin: 10rpx;
+  -webkit-transform: rotate(360deg);
+  animation: rotation 33s linear infinite;
+  -moz-animation: rotation 33s linear infinite;
+  -webkit-animation: rotation 33s linear infinite;
+  -o-animation: rotation 33s linear infinite;
+}
+ @-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/* 主体内容 */
+.index_inner{
+  width: 750rpx;
+  height: auto;
+  margin-top: 440rpx;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 20rpx;
+  background: #f5f5f5;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+.inner_first{
+  width: 750rpx;
+  height: 445rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.inner_first .inner_first_ba{
+  width: 280rpx;
+  height: 401rpx;
+  border-radius: 12rpx;
+  margin-left: 10rpx;
+}
+.inner_first .inner_first_ba image{
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+.inner_first button{
+  width: 280rpx;
+  height: 401rpx;
+  border-radius: 12rpx;
+  margin-left: 10rpx;
+  overflow: hidden;
+}
+.inner_first button image{
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+.inner_first .inner_first_hs view{
+  width: 409rpx;
+  height: 191rpx;
+  border-radius: 10rpx;
+  margin: 16rpx 0px;
+  margin-right: 10rpx;
+}
+.inner_first .inner_first_hs view image{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+/* 环保展厅 */
+.hall{
+  width: 710rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.hall .hall_title{
+  font-size:36rpx;
+  font-family:Alibaba PuHuiTi;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  margin: 50rpx 0 20rpx 0;
+}
+.hall .hall_inner{
+  width: 710rpx;
+  max-height: 560rpx;
+  border-radius: 20rpx;
+  background: #EBEBEB; 
+  overflow-y: auto;
+}
+.hall .hall_inner_every{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.hall .hall_inner_every .hall_inner_every_left{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hall .hall_inner_every .hall_inner_every_left view{
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+.hall .hall_inner_every image{
+  width: 88rpx;
+  height: 88rpx;
+  background: #81E2F9;
+  border-radius: 50%;
+  margin: 0rpx 41rpx 0 17rpx;
+}
+.hall .hall_inner_every view{
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  margin-right: 33rpx;
+}
+
+/* 常见问题 */
+.common{
+  width: 710rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.common .common_title{
+  font-size:36rpx;
+  font-family:Alibaba PuHuiTi;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  margin: 50rpx 0 20rpx 0;
+}
+
+.common_quiz{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30rpx 0;
+}
+.common_quiz view{
+  font-size:30rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+.common_quiz image{
+  width: 25rpx;
+  height: 13rpx
+}
+.common_answer{
+  background: #EBEBEB;
+  font-size:26rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(119,119,119,1);
+  box-sizing: border-box;
+  padding: 21rpx;
+  display: flex;
+  border-radius: 20rpx
+}
+.common_answer text{
+  text-indent: 10rpx
+}

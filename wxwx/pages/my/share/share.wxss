@@ -1,0 +1,28 @@
+/* pages/my/share/share.wxss */
+.share{
+  width: 750rpx;
+  height: auto;
+  position: relative;
+}
+.share image{
+  width: 750rpx;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.share button{
+  width: 496rpx;
+  height: 82rpx;
+  background: #ffffff;
+  border-radius: 15rpx;
+  text-align: center;
+  line-height: 82rpx;
+  color: #21652A;
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  position: fixed;
+  bottom: 200rpx;
+  left: 122rpx;
+  border: 2rpx solid #59C64F;
+}

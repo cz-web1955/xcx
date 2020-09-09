@@ -1,0 +1,85 @@
+/* pages/index/exchange/exchange.wxss */
+.hahaha{
+  overflow: hidden;
+}
+.exshops{
+  width: 710rpx;
+  margin: 20rpx auto;
+  border-radius: 10px;
+}
+.exshops image{
+  border-radius: 10px;
+}
+.exchange{
+  width: 424rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}
+.exchange image{
+  width: 100%;
+  height: 100%;
+}
+.exchange_recom{
+  width: 726rpx;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap
+}
+.exchange_recom .title{
+  width:706rpx;
+  color: rgba(16, 16, 16, 1);
+  font-size: 36rpx;
+  font-family: PingFangSC-bold;
+  line-height: 70rpx;
+  font-weight: bold;
+}
+.exchange_recom .every{
+  width: 344rpx;
+  height: auto;
+  background: #ffffff;
+  border-radius: 15rpx;
+  margin-bottom: 22rpx;
+  margin-right: 10rpx;
+  margin-left: 7rpx;
+}
+.exchange_recom .every image{
+  width: 344rpx;
+  height: 344rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+.exchange_recom .every .text{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.exchange_recom .every .text view:nth-child(1){
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.exchange_recom .every .text view:nth-child(2){
+  color: rgba(49, 192, 168, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+}
+.exchange_recom .every .text image{
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  background: none;
+  vertical-align: middle;
+}
+
+.exchange_recom .every .text .nsb{
+  color: #FEAD29 ;
+  margin: 0 4rpx;
+}
+.exchange_recom .every .text .pr{
+  color: #FEAD29
+}

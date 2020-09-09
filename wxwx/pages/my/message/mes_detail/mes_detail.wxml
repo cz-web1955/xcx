@@ -1,0 +1,12 @@
+<!--pages/my/message/mes_detail/mes_detail.wxml-->
+<view class="mes_header">
+  <view class="mes_detail">
+  <block wx:for='{{mesdetailList}}' wx:key='index'>
+  <view class="title">{{item.addtime}}</view>
+  <view class="inner">
+    <view>{{item.title}}</view>
+    <view>{{item.content}}</view>
+  </view>
+  </block>
+</view>
+</view>

@@ -1,0 +1,105 @@
+/* pages/my/address_add/address_add.wxss */
+.address_add{
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+}
+.address_add .inner{
+  width: 710rpx;
+  height: auto;
+  background: #ffffff;
+  border-radius: 25rpx;
+  margin: 22rpx auto;
+}
+.address_add .every{
+  width: 710rpx;
+  height: 100rpx;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  align-items: center;
+}
+.address_add .every .nas{
+  font-size: 25px;
+  margin-left: 8px;
+}
+.address_add .inner .nex{
+  border-bottom: none;
+}
+.address_add .inner .every image{
+  width: 48rpx;
+  height: 48rpx;
+  background: #31C0A8;
+  margin: 0 20rpx;
+}
+.address_add .inner .every input{
+  font-size: 28rpx;
+  color: #666666;
+}
+.address_add .inner .every button{
+  border: none;
+  background: #ffffff;
+  font-size: 28rpx;
+  color: #BDBBBB ;
+  margin-left: 16rpx;
+}
+.address_add .inner .every button text{
+  font-size: 28rpx;
+}
+.address_add .inner .every .input input{
+  width: 500rpx;
+}
+.address_add .inner .every .input22{
+  width: 500rpx;
+}
+
+.address_add .add{
+  width: 710rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+  background: #31C0A8;
+  color: rgba(255, 255, 255, 1);
+  font-size: 36rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  line-height: 100rpx;
+  margin: 0 auto;
+}
+
+
+.address-picker {
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+}
+
+.address-picker .picker-box {
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-top: 1rpx solid #ececec;
+}
+
+.address-picker .picker-box .btn-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx;
+  border-bottom: 1rpx solid #ececec;
+  font-size: 30rpx;
+}
+
+.picker-box .btn-box text {
+  display: block;
+  padding: 6rpx 30rpx;
+}
+
+.picker-box .btn-box .confirm-btn {
+  color: #f5686f;
+}

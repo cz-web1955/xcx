@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<!-- 头部 -->
+<view class="index_header">
+  <image mode="scaleToFill" src="../../images/index_header.png"/>
+  <view class="tw">
+    <view class="on">
+      <image mode="scaleToFill" src="../../images/0.png"/>
+    </view>
+  </view>
+</view>
+<!-- 主体内容 -->
+<view class="index_inner">
+  <view class="inner_first">
+    <view class="inner_first_ba" bindtap="goResever">
+      <image mode="scaleToFill" src="../../images/goResever.png"/></view>
+    <!-- <button bindtap="goAuth" wx:if="{{username==''}}">
+      <image mode="scaleToFill" src="../../images/goResever.png"/></button> -->
+    <view class="inner_first_hs">
+      <view bindtap="goExchange">
+        <image mode="scaleToFill" src="../../images/goExchange.png"/></view>
+      <view bindtap="goOld">
+        <image mode="scaleToFill" src="../../images/goOld.png"/></view>
+    </view>
+  </view>
+  <!-- banner图 -->
+  <swiper style="height:120px;" indicator-dots='true' indicator-color='#999999' indicator-active-color='#333333' circular='true' interval='3000' autoplay='true' class="inners_swiper">
+    <block wx:for="{{shopList}}" wx:key='index'>
+      <swiper-item >
+        <image style="width:100%;height:120px;border-radius:15rpx" mode="scaleToFill" data-url="{{item.url}}" src="{{item.image_src}}" bindtap="{{item.introduce}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 环保展厅 -->
+  <view class="hall">
+    <view class="hall_title">环保展厅</view>
+    <view class="hall_inner">
+      <block wx:for="{{hallList}}" wx:key='index'>
+        <view class="hall_inner_every">
+          <view class="hall_inner_every_left">
+            <image mode="scaleToFill" src="{{item.headimgurl}}"/>
+            <view>{{item.truename}}</view>
+          </view>
+          <view>回收{{item.weight}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 常见问题 -->
+  <view class="common">
+    <view class="common_title">常见问题</view>
+    <view class="common_every">
+      <block wx:for="{{issueList}}" wx:key='index'>
+        <view class="common_quiz" data-id="{{item.itemid}}" bindtap="show">
+          <view>{{item.title}}</view>
+          <image mode="widthFix" src="{{unhide==item.itemid?'../../images/top.png':'../../images/bottom.png'}}"/>
+        </view>
+        <view class="common_answer" wx:if="{{unhide==item.itemid}}">
+          <view>答:</view>
+          <text>{{item.content}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

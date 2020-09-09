@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/record/record",
+    "pages/my/my",
+    "pages/url/url",
+    "pages/index/exchange/exchange",
+    "pages/index/exchangeWin/exchangeWin",
+    "pages/index/nowBuy/nowBuy",
+    "pages/index/oldDispose/oldDispose",
+    "pages/index/reserve/reserve",
+    "pages/index/succeed/succeed",
+    "pages/index/shopDetail/shopDetail",
+    "pages/my/about_we/about_we",
+    "pages/my/about_we/about_a/about_a",
+    "pages/my/about_we/about_b/about_b",
+    "pages/my/address/address",
+    "pages/my/address_add/address_add",
+    "pages/my/collect/collect",
+    "pages/my/message/message",
+    "pages/my/message/mes_detail/mes_detail",
+    "pages/my/share/share",
+    "pages/my/stay_payment/stay_payment",
+    "pages/my/yb_detail/yb_detail",
+    "pages/serv/serv",
+    "pages/auth/auth"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/index.png",
+        "iconPath": "images/indexno.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/sever.png",
+        "iconPath": "images/severno.png",
+        "pagePath": "pages/record/record",
+        "text": "记录"
+      },
+      {
+        "selectedIconPath": "images/my.png",
+        "iconPath": "images/myno.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

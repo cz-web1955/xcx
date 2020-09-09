@@ -1,0 +1,8 @@
+<view class="auth">
+  <view class="middle">
+    <image mode="scaleToFill" src="../../images/hsy.jpg"/>
+    <view>回收猿</view>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点我登录</button>
+    <text>回收猿客服电话：400-003-0226</text>
+  </view>
+</view>

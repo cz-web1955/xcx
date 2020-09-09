@@ -1,0 +1,362 @@
+/* pages/my/my.wxss */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1591847735585'); /* IE9 */
+  src: url('iconfont.eot?t=1591847735585#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('iconfont.woff?t=1591847735585') format('woff'),
+  url('iconfont.ttf?t=1591847735585') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1591847735585#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 头部 */
+.bod{
+  width: 750rpx;
+  height: auto;
+  background: #f5f5f5;
+  padding-bottom: 15rpx;
+}
+.my_header{
+  width: 750rpx;
+  height: 206rpx;
+  background: #31C0A8;
+  display: flex;
+  align-items: center;
+}
+.my_header .wei{
+  width: 164rpx;
+  height: 52rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 52rpx;
+  border-radius: 26rpx;
+  border: 1px solid #ffffff;
+  outline: 0;
+  background: none;
+}
+.my_header .sbf .header_name .header_compile{
+  width: 164rpx;
+  height: 52rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 52rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  margin-right: 30rpx;
+  border: 1px solid #ffffff;
+  margin-left: 32rpx;
+  background: none;
+  outline: 0;
+} 
+.my_header .header_name{
+  display: flex;
+}
+.my_header .header_name view{
+  font-size: 36rpx;
+  color: rgba(248, 248, 248, 1);
+  font-family: PingFangSC-regular;
+  line-height: 55rpx;
+}
+
+.my_header .header_num{
+  font-size: 28rpx;
+  color: rgba(248, 248, 248, 1);
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+}
+.my_header image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin: 0 32rpx;
+  /* background: red; */
+}
+/* 回收成绩 */
+.my_recycle{
+  width: 710rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.my_recycle .recycle_title{
+  color: rgba(49, 192, 168, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+  margin: 21rpx 0 21rpx 15rpx;
+  font-weight: bold;
+}
+.my_recycle .recycle_inner{
+  width: 710rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.my_recycle .recycle_inner image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx
+}
+.my_recycle .recycle_inner .every_inner{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.every_inner view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: center;
+}
+/* 我的兑换 */
+.my_conver{
+  width: 710rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.my_conver button{
+  width: auto;
+  height: auto;
+  border: none;
+  outline: 0;
+  background: #ffffff;
+  border-radius: 30rpx;
+}
+.my_conver .conver_title{
+  color: rgba(49, 192, 168, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+  margin: 21rpx 0 21rpx 15rpx;
+  font-weight: bold;
+}
+.my_conver .conver_inner{
+  width: 710rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.my_conver .conver_inner image{
+  width: 65rpx;
+  height: 65rpx;
+  margin-top: 22rpx
+}
+.my_conver .conver_inner .every_inner{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.every_inner view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: center;
+}
+
+.my_conver .conver_innert{
+  width: 710rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+  background: #ffffff;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+}
+.my_conver .conver_innert image{
+  width: 65rpx;
+  height: 65rpx;
+  margin-top: 22rpx;
+}
+.my_conver .conver_innert .every_inner{
+  /* display: flex;
+  flex-flow: column;
+  align-items: center; */
+}
+.my_conver .conver_innert view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: center;
+  margin-top: 15rpx;
+}
+/* 下方 */
+.my_collect{
+  width: 710rpx;
+  height: 200rpx;
+  margin: 0rpx auto;
+  margin-top: 25rpx;
+  background: #ffffff;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.my_collect button{
+  width: auto;
+  height: auto;
+  border: none;
+  outline: 0;
+  background: #ffffff;
+}
+.my_collect .collect_every image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: 23rpx
+}
+.my_collect .collect_every{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.my_collect .collect_every view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: center;
+}
+
+.my_collectad{
+  width: 710rpx;
+  height: 200rpx;
+  margin: 0rpx auto;
+  margin-top: 25rpx;
+  background: #ffffff;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  /* align-items: center; */
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.my_collectad .collect_every image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: 27rpx;
+}
+.my_collectad .collect_every{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.my_collectad .collect_every view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: center;
+  margin-top: 25rpx;
+}
+
+
+.my_collecttwo{
+  width: 710rpx;
+  height: 180rpx;
+  margin: 0rpx auto;
+  background: #ffffff;
+  display: flex;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.my_collecttwo .collect_every{
+  margin-left: 30rpx
+}
+.my_collecttwo .collect_every image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: 0rpx;
+  margin-left: 17rpx;
+}
+.my_collecttwo .collect_every view{
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  text-align: center;
+  margin-top: 25rpx;
+  /* padding-bottom: 15rpx; */
+}
+
+
+
+
+.liyg{
+  width: 750rpx;
+  height: 100vh;
+  background: #ffffff;
+}
+.liyg .middle{
+  width: 700rpx;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 140rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background: #ffffff;
+}
+.liyg .middle image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.liyg .middle view{
+  color: rgba(49, 192, 168, 1);
+  font-size: 36rpx;
+  font-family: 方正准圆-标准;
+  line-height: 90rpx;
+}
+.liyg .middle button{
+  width: 480rpx;
+  height: 100rpx;
+  background: #31C0A8 ;
+  border-radius: 50rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-family: PingFangSC-regular;
+  border: none;
+  margin: 40rpx 0;
+}
+.liyg .middle text{
+  color: rgba(136, 136, 136, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  margin-top: 20rpx;
+}
+.iso{
+   position: relative; 
+}
+
+.quit{
+  width: 710rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  background: #ffffff;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  margin-top: 24rpx;
+  margin-bottom: 40rpx;
+  color: rgba(49, 192, 168, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+
+/* contact-button{position: absolute;right: 0;top: 0;
+opacity: 0;
+width: 140rpx;height: 140rpx;} */

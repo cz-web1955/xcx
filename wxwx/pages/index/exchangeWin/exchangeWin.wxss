@@ -1,0 +1,105 @@
+/* pages/index/exchangeWin/exchangeWin.wxss */
+.exshops{
+  width: 710rpx;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.exWin{
+  width: 750rpx;
+  height: auto;
+  padding-bottom: 150rpx;
+  overflow: hidden;
+}
+.exWin .header{
+  width: 695rpx;
+  height: 170rpx;
+  margin-left: 27rpx;
+  margin-top: 15px;
+}
+.exWin .inner{
+  width: 750rpx;
+  height: auto;
+  margin: 20rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.exWin .inner .every{
+  width: 222rpx;
+  height: auto;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.exWin .inner .every image{
+  width: 222rpx;
+  height: 222rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.exWin .inner .every .txt{
+  width: 230rpx;
+  height: auto;
+  padding-bottom: 15rpx;
+  
+  /* box-sizing: border-box;
+  padding: 16rpx; */
+}
+.exWin .inner .txt .asdd{
+  color: #31C0A8;
+}
+.exWin .inner .every .title{
+  color: rgba(16, 16, 16, 1);
+  font-size: 26rpx;
+  font-family: PingFangSC-regular;
+  padding-top: 10rpx;
+  padding-left: 6rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.exWin .inner .every .txt  .nsb{
+  color: #FFB640;
+  margin: 0 4rpx;
+}
+.exWin .inner .every .txt image{
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.exWin .inner .every .txt text{
+  /* color: rgba(49, 192, 168, 1); */
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+
+
+/*  */
+.exWin .store{
+  width: 710rpx;
+  height: 206rpx;
+  margin: 24rpx auto;
+  background: #dedede;
+  border-radius: 20rpx;
+}
+
+.exWin_down{
+  position: fixed;
+  bottom: 60rpx;
+  left: 20rpx;
+  width: 710rpx;
+  height: 90rpx;
+  border: 1px solid #31C0A8;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size:36rpx;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(43,217,201,1);
+}

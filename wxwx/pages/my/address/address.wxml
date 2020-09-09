@@ -1,0 +1,41 @@
+<!--pages/my/address/address.wxml-->
+<view class="address_cis" wx:if='{{addressList.length}}'>
+  <block wx:for="{{addressList}}" wx:key="index">
+    <view class="every">
+      <view class="names">
+        <text>{{item.truename}}</text>
+        <text>{{item.mobile}}</text>
+      </view>
+      <view class="city">{{item.province}}{{item.city}}{{item.district}}{{item.address}}</view>
+      <view class="select">
+        <view bindtap="trueAdd" data-id="{{item.itemid}}">
+          <image mode="scaleToFill" src="{{tureId==item.itemid?'../../../images/add_yes.png':'../../../images/add_no.png'}}"/><text>默认地址</text>
+        </view>
+        <view class="tw" bindtap="delAdd" data-status="{{item.status}}" data-id="{{item.itemid}}">
+          <view class="nas iconfont iconshanchu1"></view><view class="dels">删除</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="address_inner" wx:else>您还没有添加地址 ~</view>
+<!-- <functional-page-navigator
+    name="chooseAddress"
+    version="develop"
+    bind:success="onSuccess"
+    bind:fail="onFail"
+  >
+    <button>选择收货地址</button>
+  </functional-page-navigator> -->
+
+<view class="address_text">
+  <view class="address_two" bindtap="common">
+    <image mode="scaleToFill" src="../../../images/address1.png"/>
+    <view>添加地址</view>
+  </view>
+  <!-- <view class="address_two" bindtap="taobao">
+    <image mode="scaleToFill" src="../../../images/address2.png"/>
+    <view>添加淘宝地址</view>
+  </view> -->
+</view>

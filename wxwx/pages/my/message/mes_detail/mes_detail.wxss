@@ -1,0 +1,40 @@
+/* pages/my/message/mes_detail/mes_detail.wxss */
+.mes_header{
+  width: 750rpx;
+  height: auto;
+  overflow: hidden
+}
+.mes_detail .title{
+  color: rgba(164, 164, 164, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.mes_detail .inner{
+  width: 722rpx;
+  height: auto;
+  background: #ffffff;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+  padding: 10rpx 14rpx;
+}
+.mes_detail .inner view{
+  color: rgba(164, 164, 164, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+  line-height: 50rpx;
+}
+.mes_detail .inner view:nth-child(1){
+  color: rgba(16, 16, 16, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+.mes_detail .inner view:nth-child(2){
+  text-indent: 50rpx;
+}
+.mes_detail .inner view:nth-child(3){
+  text-align: right
+}

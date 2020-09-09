@@ -1,0 +1,14 @@
+<!--pages/my/yb_detail/yb_detail.wxml-->
+<view class="yb_detail">
+<block wx:for='{{ybList}}' wx:key='index'>
+  <view class="every">
+  
+    <view class="every_title">
+      <image mode="scaleToFill" src="../../../images/ybb.png"/>
+      <view >{{item.reason}}</view>
+    </view>
+    <view class="{{item.amount<0?'txtsb':'txtsa'}}"><text wx:if='{{item.amount>0}}'>+</text>{{item.amount}}</view>
+  
+  </view>
+    </block>
+</view>

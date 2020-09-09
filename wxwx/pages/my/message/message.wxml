@@ -1,0 +1,18 @@
+<!--pages/my/message/message.wxml-->
+<view class="message" wx:if='{{messageList.length}}'>
+  <view class="every" bindtap="goNext">
+    <view class="photo">
+      <text class="nsb iconfont iconxinbaniconshangchuan-"></text>
+    </view>
+    <view class="inform">
+      <view>{{messageList[0].fromuser}}</view>
+      <view class="mess">{{messageList[0].title}}</view>
+    </view>
+    <view class="time">
+      <view>{{messageList[0].addtime}}</view>
+      <view wx:if="{{messageList[0].notreadcounts!==0}}" class="num">{{messageList[0].notreadcounts}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="titi" wx:else><text>您还没有消息~</text></view>
